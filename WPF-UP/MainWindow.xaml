@@ -1,12 +1,28 @@
 ﻿<Window x:Class="WPF_UP.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WPF_UP"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:local="clr-namespace:WPF_UP"
+            mc:Ignorable="d"
+            Title="Регистрация" Height="400" Width="600" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="#2C3E50">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Настройки" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontWeight="Bold" Foreground="White" Margin="0,20,0,10"/>
+
+        <StackPanel Grid.Row="1" Margin="20">
+            <TextBlock Text="Тема" FontSize="20" HorizontalAlignment="Center" Foreground="White" Margin="0,0,0,10"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Command="{Binding ChangeToDarkThemeCommand}" Content="Тёмная" FontSize="20" Margin="10" Background="#3498db" Foreground="White"/>
+                <Button Command="{Binding ChangeToLightThemeCommand}" Content="Светлая" FontSize="20" Margin="10" Background="#ecf0f1" Foreground="#2c3e50"/>
+            </StackPanel>
+
+            <Button Command="{Binding BackCommand, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Content="Назад" FontSize="20" Margin="10" Background="#e74c3c" Foreground="White"/>
+        </StackPanel>
     </Grid>
 </Window>
