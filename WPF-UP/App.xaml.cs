@@ -1,10 +1,16 @@
-﻿using System.Windows;
-using WPF_UP.Views;
+﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
+using WPF_LoginForm.Views;
 
-namespace WPF_UP
+namespace WPF_LoginForm
 {
     /// <summary>
-    /// Логика взаимодействия для App.xaml
+    /// Interaction logic for App.xaml
     /// </summary>
     public partial class App : Application
     {
@@ -13,21 +19,21 @@ namespace WPF_UP
             var loginView = new LoginView();
             loginView.Show();
             loginView.IsVisibleChanged += (s, ev) =>
-            {
-                if (loginView.IsVisible == false && loginView.IsLoaded)
-                {
-                    var mainView = new MainView();
-                    mainView.Show();
-                    try
-                    {
-                        loginView.Close();
-                    }
-                    catch
-                    {
+              {
+                  if (loginView.IsVisible == false && loginView.IsLoaded)
+                  {
+                      var mainView = new MainView();
+                      mainView.Show();
+                      try
+                      {
+                          loginView.Close();
+                      }
+                      catch
+                      {
 
-                    }
-                }
-            };
+                      }
+                  }
+              };
         }
     }
 }

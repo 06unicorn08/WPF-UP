@@ -12,16 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WPF_UP.Views
+namespace WPF_LoginForm.Views
 {
     /// <summary>
-    /// Логика взаимодействия для LoginView.xaml
+    /// Interaction logic for LoginView.xaml
     /// </summary>
     public partial class LoginView : Window
     {
         public LoginView()
         {
             InitializeComponent();
+            ThemeManager.ApplyTheme(bg, bgs);
+            QuotesList quotesList = new QuotesList();
+            textQuote.Text = quotesList.GetRandomQuote();
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -41,5 +44,18 @@ namespace WPF_UP.Views
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e) { }
+
+        private void TextBlock_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            RegisterView registerView = new RegisterView();
+            registerView.Show();
+            this.Close();
+        }
+
+        private void btnReg_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }
