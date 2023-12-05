@@ -140,33 +140,7 @@ namespace WPF_LoginForm.Repositories
                 }
             }
         }
-        public void EditUser(UserModel user)
-        {
-            if (user == null)
-            {
-                MessageView messageView = new MessageView("Ошибка", "Вы ничего не редактировали!");
-                messageView.Show();
-            }
-            else
-            {
-                using (SqlConnection connection = GetConnection())
-                {
-                    connection.Open();
+        
 
-                    string query = "UPDATE Users SET LastName = @LastName, Name = @Name, MiddleName = @MiddleName WHERE Username = @Username";
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@Username", user.Username);
-                        command.Parameters.AddWithValue("@LastName", user.LastName);
-                        command.Parameters.AddWithValue("@Name", user.Name);
-                        command.Parameters.AddWithValue("@MiddleName", user.MiddleName);
-
-                        command.ExecuteNonQuery();
-                    }
-                }
-            }
-            
-        }
     }
 }
