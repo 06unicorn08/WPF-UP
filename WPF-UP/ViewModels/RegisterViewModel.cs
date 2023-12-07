@@ -118,14 +118,13 @@ namespace WPF_LoginForm.ViewModels
                         Password = password
                     });
 
-                    // Очистка конвертированных данных
                     System.Runtime.InteropServices.Marshal.ZeroFreeBSTR(passwordPtr);
 
                     Username = string.Empty;
                     LastName = string.Empty;
                     FirstName = string.Empty;
                     MiddleName = string.Empty;
-                    Password.Clear();
+                    Password.Clear(); 
                     ErrorMessage = string.Empty;
 
                     if (parameter is Window window)
