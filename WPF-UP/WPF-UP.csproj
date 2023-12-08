@@ -74,6 +74,7 @@
     <Compile Include="Models\IUserRepository.cs" />
     <Compile Include="Models\UserAccountModel.cs" />
     <Compile Include="Models\UserModel.cs" />
+    <Compile Include="QuotesList.cs" />
     <Compile Include="Repositories\DataBase.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="ViewModels\EditDataViewModel.cs" />
@@ -126,6 +127,10 @@
     <Page Include="Views\RegisterView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Tems.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>

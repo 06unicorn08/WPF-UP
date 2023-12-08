@@ -24,6 +24,7 @@ namespace WPF_LoginForm.Views
         {
             InitializeComponent();
             titleMessage.Text = title;
+            textMessage.Text = text;
         }
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {

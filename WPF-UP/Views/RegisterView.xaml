@@ -20,6 +20,9 @@
         <Border BorderThickness="1" Background="Black" x:Name="bgs"  Opacity="0.85">
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#462AD8" Offset="0"/>
+                    <GradientStop Color="#DA34AE" Offset="0.75"/>
+                    <GradientStop Color="#462AD8" Offset="1"/>
                 </LinearGradientBrush>
             </Border.BorderBrush>
             <Grid>
