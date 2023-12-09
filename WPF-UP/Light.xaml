@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="LightTheme" TargetType="Border">
+        <Setter Property="Background">
+            <Setter.Value>
+                <ImageBrush ImageSource="/Images/error-image.png" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="LightThemeBG" TargetType="Border">
+        <Setter Property="Opacity" Value="0.85"/>
+    </Style>
+</ResourceDictionary>

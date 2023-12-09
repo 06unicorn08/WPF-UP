@@ -77,6 +77,7 @@
     <Compile Include="QuotesList.cs" />
     <Compile Include="Repositories\DataBase.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="ThemeManager.cs" />
     <Compile Include="ViewModels\EditDataViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
@@ -107,6 +108,14 @@
     <Page Include="CustomControls\BindablePasswordBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dark.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Light.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\EditView.xaml">
       <SubType>Designer</SubType>

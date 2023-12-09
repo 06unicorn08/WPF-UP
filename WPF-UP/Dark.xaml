@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="DarkTheme" TargetType="Border">
+        <Setter Property="Background">
+            <Setter.Value>
+                <ImageBrush ImageSource="/Images/back-image.jpg" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="DarkThemeBG" TargetType="Border">
+        <Setter Property="Background" Value="Black"/>
+        <Setter Property="Opacity" Value="0.85"/>
+    </Style>
+</ResourceDictionary>
