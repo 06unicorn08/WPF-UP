@@ -95,7 +95,7 @@ namespace WPF_LoginForm.ViewModels
 
             if(selectedUser == null)
             {
-                MessageView messageView = new MessageView("Ошибка удаления", $"Не выбран не один пользователь!");
+                MessageView messageView = new MessageView("Ошибка удаления", "Не выбран не один пользователь!");
                 messageView.Show();
             }
             else

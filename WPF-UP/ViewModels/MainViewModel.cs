@@ -18,11 +18,6 @@ namespace WPF_LoginForm.ViewModels
         private UserAccountModel _currentUserAccount;
         private IUserRepository userRepository;
 
-        
-
-        
-        
-
         public UserAccountModel CurrentUserAccount
         {
 
@@ -55,10 +50,6 @@ namespace WPF_LoginForm.ViewModels
                 CurrentUserAccount.DisplayLastName = user.LastName;
                 CurrentUserAccount.DisplayMiddleName = user.MiddleName;
                 CurrentUserAccount.ProfilePicture = null;               
-            }
-            else
-            {
-                CurrentUserAccount.DisplayName="Invalid user, not logged in";
             }
         }
     }

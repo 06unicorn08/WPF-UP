@@ -63,7 +63,6 @@ namespace WPF_LoginForm.ViewModels
             }
         }
 
-        // Изменения в свойстве Password
         public SecureString Password
         {
             get { return _password; }
@@ -126,10 +125,9 @@ namespace WPF_LoginForm.ViewModels
                     LastName = string.Empty;
                     FirstName = string.Empty;
                     MiddleName = string.Empty;
-                    Password.Clear(); // Очистка SecureString
+                    Password.Clear(); 
                     ErrorMessage = string.Empty;
 
-                    // Закрытие текущего окна
                     if (parameter is Window window)
                     {
                         window.Close();
