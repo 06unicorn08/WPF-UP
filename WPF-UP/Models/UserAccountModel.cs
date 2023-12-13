@@ -12,6 +12,5 @@ namespace WPF_LoginForm.Models
         public string DisplayName { get; set; }
         public string DisplayLastName { get; set; }
         public string DisplayMiddleName { get; set; }
-        public byte[] ProfilePicture { get; set; }
     }
 }

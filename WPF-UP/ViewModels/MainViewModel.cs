@@ -48,8 +48,7 @@ namespace WPF_LoginForm.ViewModels
                 CurrentUserAccount.Username = user.Username;
                 CurrentUserAccount.DisplayName = user.Name;
                 CurrentUserAccount.DisplayLastName = user.LastName;
-                CurrentUserAccount.DisplayMiddleName = user.MiddleName;
-                CurrentUserAccount.ProfilePicture = null;               
+                CurrentUserAccount.DisplayMiddleName = user.MiddleName;             
             }
         }
     }
