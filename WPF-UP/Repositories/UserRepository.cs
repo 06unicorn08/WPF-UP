@@ -134,7 +134,7 @@ namespace WPF_LoginForm.Repositories
                     command.Parameters.AddWithValue("@LastName", user.LastName);
                     command.Parameters.AddWithValue("@Name", user.Name);
                     command.Parameters.AddWithValue("@MiddleName", user.MiddleName);
-                    command.Parameters.AddWithValue("@Password", user.Password);
+                    command.Parameters.AddWithValue("@Password", user.Password); // Исправлено на @Password
 
                     command.ExecuteNonQuery();
                 }

@@ -18,7 +18,16 @@ namespace WPF_LoginForm.ViewModels
 
         public ObservableCollection<UserModel> Users { get; set; } 
 
-       
+        public UserModel SelectedUser
+        {
+            get { return _selectedUser; }
+            set
+            {
+                _selectedUser = value;
+                OnPropertyChanged(nameof(SelectedUser));
+            }
+        }
+
         public ICommand EditUserCommand { get; }
 
         public EditDataViewModel()
@@ -38,6 +47,7 @@ namespace WPF_LoginForm.ViewModels
                     var userRepository = new UserRepository();
                     userRepository.EditUser(SelectedUser);
 
+                    // Обновление пользователя в коллекции
                     var updatedUserIndex = Users.IndexOf(Users.FirstOrDefault(u => u.Username == SelectedUser.Username));
                     if (updatedUserIndex != -1)
                     {
@@ -56,19 +66,10 @@ namespace WPF_LoginForm.ViewModels
                 messageView.Show();
             }
         }
-        public UserModel SelectedUser
-        {
-            get { return _selectedUser; }
-            set
-            {
-                _selectedUser = value;
-                OnPropertyChanged(nameof(SelectedUser));
-            }
-        }
-
 
         private IEnumerable<UserModel> LoadUsers()
         {
+            // Загрузка пользователей из репозитория или другого источника данных
             var userRepository = new UserRepository();
             return userRepository.GetByAll();
         }

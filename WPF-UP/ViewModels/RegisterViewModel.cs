@@ -18,7 +18,7 @@ namespace WPF_LoginForm.ViewModels
         private string _lastName;
         private string _name;
         private string _middleName;
-        private SecureString _password; // Используем SecureString для пароля
+        private SecureString _password; 
         private string _errorMessage;
 
         public string Username
@@ -63,6 +63,7 @@ namespace WPF_LoginForm.ViewModels
             }
         }
 
+        
         public SecureString Password
         {
             get { return _password; }
@@ -118,7 +119,7 @@ namespace WPF_LoginForm.ViewModels
                         Password = password
                     });
 
-                    // Очистка конвертированных данных
+                    
                     System.Runtime.InteropServices.Marshal.ZeroFreeBSTR(passwordPtr);
 
                     Username = string.Empty;
@@ -128,6 +129,7 @@ namespace WPF_LoginForm.ViewModels
                     Password.Clear(); 
                     ErrorMessage = string.Empty;
 
+                    
                     if (parameter is Window window)
                     {
                         window.Close();

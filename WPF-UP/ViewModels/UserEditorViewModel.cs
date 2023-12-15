@@ -39,18 +39,18 @@ namespace WPF_LoginForm.ViewModels
 
         private IUserRepository userEditor;
 
-        
-
-        private bool CanEditUser(object parameter)
-        {
-            return SelectedUser != null;
-        }
         public UserEditorViewModel()
         {
             userEditor = new UserRepository();
             Users = new ObservableCollection<UserModel>(userEditor.GetByAll());
             EditUserCommand = new ViewModelCommand(EditUser, CanEditUser);
         }
+
+        private bool CanEditUser(object parameter)
+        {
+            return SelectedUser != null;
+        }
+
         private void EditUser(object parameter)
         {
             if (SelectedUser == null)
