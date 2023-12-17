@@ -17,7 +17,7 @@ namespace WPF_LoginForm.ViewModels
         //Fields
         private UserAccountModel _currentUserAccount;
         private IUserRepository userRepository;
--
+
         public UserAccountModel CurrentUserAccount
         {
 
