@@ -140,7 +140,7 @@ namespace WPF_LoginForm.ViewModels
             }
             else
             {
-                ErrorMessage = "* Неверные данные";
+                ErrorMessage = "* Invalid username or password";
             }
         }
 
