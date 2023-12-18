@@ -11,7 +11,7 @@ using WPF_LoginForm.Views;
 
 namespace WPF_LoginForm.Repositories
 {
-    public class UserRepository : DataBase, IUserRepository
+    public class UserRepository : DataBase, IUser
     {
         public void Add(UserModel userModel)
         {

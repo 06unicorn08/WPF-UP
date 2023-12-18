@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WPF_LoginForm.Models
 {
-    public interface IUserRepository
+    public interface IUser
     {
         bool AuthenticateUser(NetworkCredential credential);
         void Add(UserModel userModel);
@@ -17,6 +17,5 @@ namespace WPF_LoginForm.Models
         UserModel GetByUsername(string username);
         IEnumerable<UserModel> GetByAll();
         void RemoveByUsername(string username);
-        //...
     }
 }

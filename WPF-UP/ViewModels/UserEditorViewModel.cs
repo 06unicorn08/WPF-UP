@@ -37,7 +37,7 @@ namespace WPF_LoginForm.ViewModels
 
         public ICommand EditUserCommand { get; }
 
-        private IUserRepository userEditor;
+        private IUser userEditor;
 
         public UserEditorViewModel()
         {

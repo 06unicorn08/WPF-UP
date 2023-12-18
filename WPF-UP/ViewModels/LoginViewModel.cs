@@ -25,7 +25,7 @@ namespace WPF_LoginForm.ViewModels
 
 
 
-        private IUserRepository userRepository;
+        private IUser userRepository;
 
         //Properties
         public string Username
