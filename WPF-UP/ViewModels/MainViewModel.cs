@@ -42,13 +42,13 @@ namespace WPF_LoginForm.ViewModels
 
         private void LoadCurrentUserData()
         {
-            var user = userRepository.GetByUsername(Thread.CurrentPrincipal.Identity.Name);
-            if (user != null)
+            var users = userRepository.GetByUsername(Thread.CurrentPrincipal.Identity.Name);
+            if (users != null)
             {
-                CurrentUserAccount.Username = user.Username;
-                CurrentUserAccount.DisplayName = user.Name;
-                CurrentUserAccount.DisplayLastName = user.LastName;
-                CurrentUserAccount.DisplayMiddleName = user.MiddleName;             
+                CurrentUserAccount.Username = users.Username;
+                CurrentUserAccount.DisplayName = users.Name;
+                CurrentUserAccount.DisplayLastName = users.LastName;
+                CurrentUserAccount.DisplayMiddleName = users.MiddleName;             
             }
         }
     }

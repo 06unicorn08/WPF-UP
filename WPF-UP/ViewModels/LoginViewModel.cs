@@ -17,17 +17,13 @@ namespace WPF_LoginForm.ViewModels
 {
     public class LoginViewModel : ViewModelBase
     {
-        //Fields
         private string _username;
         private SecureString _password;
         private string _errorMessage;
         private bool _isViewVisible = true;
 
-
-
         private IUser userRepository;
 
-        //Properties
         public string Username
         {
             get

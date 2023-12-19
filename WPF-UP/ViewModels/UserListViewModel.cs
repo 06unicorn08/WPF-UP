@@ -104,9 +104,9 @@ namespace WPF_LoginForm.ViewModels
                 var userRepository = new UserRepository();
                 userRepository.RemoveByUsername(username);
 
-                LoadData();
+                
             }
-            
+            LoadData();
         }
     }
 }
