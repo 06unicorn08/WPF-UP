@@ -15,7 +15,7 @@
 
     <Border>
         <Border.Background>
-            <ImageBrush ImageSource="/Images/error-image.png" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="/Images/errr-image.png" Stretch="UniformToFill"/>
         </Border.Background>
         <Border BorderThickness="2" Opacity="0.85" Background="Black">
             <Border.BorderBrush>
